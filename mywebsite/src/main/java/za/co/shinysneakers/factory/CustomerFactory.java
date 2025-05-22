@@ -9,7 +9,7 @@ import java.util.Random;
 public class CustomerFactory {
     public static Customer createCustomer(String firstName, String lastName,short streetNumber,String streetName,
                                           String suburb, String city, String province, Short postalCode, String country ,  String email, String mobile) {
-        String customerID = Helper.generateID();
+        int customerID = Helper.generateID();
 
         if (Helper.isNullOrEmpty(firstName) || Helper.isNullOrEmpty(lastName)) return null;
         if (!Helper.isValidEmail(email)) return null;

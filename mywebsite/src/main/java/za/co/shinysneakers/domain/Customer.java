@@ -7,7 +7,7 @@ import java.util.Locale;
 @Entity
 public class Customer {
     @Id
-    private String customerID;
+    private int customerID;
     private String firstName;
     private String lastName;
     private String mobile;
@@ -29,7 +29,7 @@ public class Customer {
         this.homeAddress = builder.homeAddress;
     }
 
-    public String getCustomerID() {
+    public int getCustomerID() {
         return customerID;
     }
 
@@ -63,7 +63,7 @@ public class Customer {
                 '}';
     }
     public static class Builder {
-        private String customerID;
+        private int customerID;
         private String firstName;
         private String lastName;
         private String mobile;
@@ -71,7 +71,7 @@ public class Customer {
         private HomeAddress homeAddress;
 
 
-        public Builder setCustomerID(String customerID) {
+        public Builder setCustomerID(int customerID) {
             this.customerID = customerID;
             return this;
         }

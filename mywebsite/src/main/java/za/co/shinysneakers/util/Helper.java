@@ -4,7 +4,8 @@ import java.util.UUID;
 
 public class Helper {
     public static boolean isNullOrEmpty(String str) { return str == null || str.isEmpty(); }
-    public static String generateID( ) { return UUID.randomUUID().toString(); }
+    public static int generateID( ) { return Helper.generateID(); }
+    //{ return UUID.randomUUID().toString(); }
 
     public static boolean isValidEmail(String email) {
         if (isNullOrEmpty(email)) {
